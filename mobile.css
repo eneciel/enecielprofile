@@ -1,5 +1,5 @@
 h1 {
-    font-size: 48px;
+    font-size: 40px;
 }
 
 .buttons {
@@ -51,6 +51,9 @@ footer {
 
 #overflow {
     flex-wrap: wrap;
+    * + * {
+        margin-top: 16px;
+    }
 }
 
 .bodytext {
