@@ -1,0 +1,285 @@
+<html>
+    <head>
+        <title>NaCl profile</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="style.css" rel="stylesheet">
+        <link href="mobile.css" rel="stylesheet" media="(orientation: portrait)">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+        <script>
+            function play() {
+                var audio = document.getElementById("audioclick");
+                var image = document.getElementById("hiTwo");
+                
+                if (audio.paused) {
+                    audio.play();
+                    image.animate(
+                        {scale: [1, 1.5] , easing: ["ease-out"]},
+                        800
+                    )
+                }else{
+                    audio.play();
+                    audio.currentTime = 0
+                };
+            };
+
+            const langResource = {
+                en : {
+                    nacl: "Nacl",
+                    of: "'s",
+                    title: "Favourites",
+
+                    h301: "Characters",
+                    h301_t01: "THE favourite",
+                    h301_b01: "Two",
+                    h301_p01: "Like how do you not notice",
+                    h301_t02: "Characters I like",
+                    h301_b02_01: "Four",
+                    h301_b02_02: "Leafy",
+                    h301_b02_03: "Black Hole",
+                    h301_t03: "Shippings",
+                    h301_b03_01: "4x",
+                    h301_b03_02: "Fireafy",
+                    h301_b03_03: "Coinpin",
+                    h301_t04: "Duos & Groups",
+                    h301_b04_01: "Two & Four",
+                    h301_p04_01: "Frienemies",
+                    h301_b04_02: "Two & One",
+                    h301_p04_02: "???",
+                    h301_b04_03: "GB&TB",
+                    h301_p04_03: "Best friends",
+                    h301_b04_04: "BH&Tree&Fanny",
+                    h301_p04_04: "Death preventers",
+                    h301_b04_05: "Two & Gaty",
+                    h301_p04_05: "Therapy time",
+                    h301_t05: "Teams",
+                    h301_b05_01: "Death P.A.C.T.",
+                    h301_p05_01: "Including all variants",
+                    h301_b05_02: "Freesmart",
+                    h301_p05_02: "BFDIA 6",
+                    h301_b05_03: "Are You Okay",
+                    h301_p05_03: "TPOT",
+
+                    h302: "Note",
+                    h302_h401: "I DO NOT ship Two with anyone.",
+                    h302_p01: "Please keep in mind that I don't want some characters to have romantic relationship unless it's canon, at least under my understandings of their chracteristics. I consider Two as aroace.",
+                    h302_h402: "Ships are ships, and duos are duos.",
+                    h302_p02: "I respect any shippings, but you too have to respect me for not shipping them. Let them just have some adorable dynamics."
+                },
+                ko : {
+                    nacl: "엔에씨엘",
+                    of: "의",
+                    title: "최애 정리",
+
+                    h301: "캐릭터",
+                    h301_t01: "절대 최애",
+                    h301_b01: "투",
+                    h301_p01: "모르실 수가 있나 싶음",
+                    h301_t02: "좋아하는 캐들",
+                    h301_b02_01: "포",
+                    h301_b02_02: "리피",
+                    h301_b02_03: "블랙홀",
+                    h301_t03: "커플링",
+                    h301_b03_01: "4x",
+                    h301_b03_02: "파이어리피",
+                    h301_b03_03: "코인핀",
+                    h301_t04: "조합",
+                    h301_b04_01: "투 & 포",
+                    h301_p04_01: "친혐관",
+                    h301_b04_02: "투 & 원",
+                    h301_p04_02: "???",
+                    h301_b04_03: "골프볼&테니스볼",
+                    h301_p04_03: "절친",
+                    h301_b04_04: "블랙홀&트리&패니",
+                    h301_p04_04: "죽음을 막는 자들",
+                    h301_b04_05: "투 & 게이티",
+                    h301_p04_05: "고민상담 듀오",
+                    h301_t05: "팀",
+                    h301_b05_01: "Death P.A.C.T.",
+                    h301_p05_01: "변형 팀 모두 포함",
+                    h301_b05_02: "Freesmart",
+                    h301_p05_02: "BFDIA 6",
+                    h301_b05_03: "Are You Okay",
+                    h301_p05_03: "TPOT",
+
+                    h302: "참조",
+                    h302_h401: "저는 투를 누구와도 엮지 않습니다.",
+                    h302_p01: "몇몇 캐릭터들은 유성애적 관계가 아닐 것이라 캐해한다는 점 참고해주세요. (물론 공식이 제시한 관계를 절대 우선합니다.) 개인적으로 투를 무성애/무로맨틱으로 캐해하고 있습니다.",
+                    h302_h402: "커플링과 조합은 다릅니다.",
+                    h302_p02: "어느 커플링을 파시든 존중합니다. 그러니 제가 특정 캐릭터들을 커플링으로 엮지 않는다는 점도 존중해 주셨으면 합니다. 저는 캐릭터들간의 조합을 소수의 캐릭터 외에는 유성애 없이 있는 그대로 소비하고 싶습니다."
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <main>
+            <div id="nav">
+                <a href="index.html">← Back</a>
+                <div class="langContainer">
+                    <img src="source/icon/ic_globe.svg">
+                    <select id="languageSelector">
+                        <option value="en">English</option>
+                        <option value="ko">한국어</option>
+                    </select>
+                </div>
+            </div>
+            <div id="container">
+                <div class="center">
+                    <div class="row">
+                        <h3><span class="color-me" id="nacl"></span></h3>
+                        <h3 id="of"></h3>
+                    </div>
+                    <h2 id="title"></h2>
+                </div>
+                <div class="fill margin-8 padding-16"> <!-- characters -->
+                    <div class="fill row-align">
+                        <h3 id="h301"></h3>
+                        <img src="source/img/favs1.gif" style="width: 120px;">
+                    </div>
+                    <div class="margin-8 padding-16"> <!-- two. -->
+                        <h4 id="h301_t01"></h4>
+                        <div class="fill row center padding-8">
+                            <div class="characterbox">
+                                <img src="source/img/favs_two.png">
+                                <h4 id="h301_b01"></h4>
+                                <p id="h301_p01"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="margin-8 padding-16"> <!-- likes -->
+                        <h4 id="h301_t02"></h4>
+                        <div class="fill-center row margin-16w padding-8">
+                            <div class="characterbox">
+                                <img src="source/img/favs_four.png">
+                                <h4 id="h301_b02_01"></h4>
+                            </div>
+                            <div class="characterbox">
+                                <img src="source/img/favs_leafy.png">
+                                <h4 id="h301_b02_02"></h4>
+                            </div>
+                            <div class="characterbox">
+                                <img src="source/img/favs_bh.png">
+                                <h4 id="h301_b02_03"></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="margin-8 padding-16"> <!-- shippings -->
+                        <h4 id="h301_t03"></h4>
+                        <div class="fill-center row margin-16w padding-8">
+                            <div class="characterbox">
+                                <img src="source/img/favs_4x.png">
+                                <h4 id="h301_b03_01"></h4>
+                            </div>
+                            <div class="characterbox">
+                                <img src="source/img/favs_fireafy.png">
+                                <h4 id="h301_b03_02"></h4>
+                            </div>
+                            <div class="characterbox">
+                                <img src="source/img/favs_coinpin.png">
+                                <h4 id="h301_b03_03"></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="margin-8 padding-16"> <!-- groups -->
+                        <h4 id="h301_t04"></h4>
+                        <div class="fill-center row margin-16w padding-8" id="overflow">
+                            <div class="characterbox">
+                                <img src="source/img/favs_2n4.png">
+                                <h4 id="h301_b04_01"></h4>
+                                <p id="h301_p04_01"></p>
+                            </div>
+                            <div class="characterbox">
+                                <img src="source/img/favs_2n1.png">
+                                <h4 id="h301_b04_02"></h4>
+                                <p id="h301_p04_02"></p>
+                            </div>
+                            <div class="characterbox">
+                                <img src="source/img/favs_gbntb.png">
+                                <h4 id="h301_b04_03"></h4>
+                                <p id="h301_p04_03"></p>
+                            </div>
+                            <div class="characterbox">
+                                <img src="source/img/favs_bhntreenfanny.png">
+                                <h4 id="h301_b04_04"></h4>
+                                <p id="h301_p04_04"></p>
+                            </div>
+                            <div class="characterbox">
+                                <img src="source/img/favs_2ngaty.png">
+                                <h4 id="h301_b04_05"></h4>
+                                <p id="h301_p04_05"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="margin-8 padding-16"> <!-- teams -->
+                        <h4 id="h301_t05"></h4>
+                        <div class="fill-center row margin-16w padding-8" id="overflow">
+                            <div class="characterbox">
+                                <img src="source/img/favs_deathpact.png">
+                                <h4 id="h301_b05_01"></h4>
+                                <p id="h301_p05_01"></p>
+                            </div>
+                            <div class="characterbox">
+                                <img src="source/img/favs_freesmart.png">
+                                <h4 id="h301_b05_02"></h4>
+                                <p id="h301_p05_02"></p>
+                            </div>
+                            <div class="characterbox">
+                                <img src="source/img/favs_areyouokay.png">
+                                <h4 id="h301_b05_03"></h4>
+                                <p id="h301_p05_03"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fill margin-8 padding-16"> <!-- note -->
+                    <div class="fill row-align">
+                        <h3 id="h302"></h3>
+                        <img src="source/img/favs2.gif" style="width: 120px;">
+                    </div>
+                    <div class="center margin-8 padding-16">
+                        <h4 style="color: var(--system-red);"><b id="h302_h401"></b></h4>
+                        <p id="h302_p01" class="bodytext"></p>
+                    </div>
+                    <div class="center margin-8 padding-16">
+                        <h4><b id="h302_h402"></b></h4>
+                        <p id="h302_p02" class="bodytext"></p>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <p>NaCl's profile</p>
+            </footer>
+        </main>
+
+        <script>
+            /* 초기 언어는 영어(en)로 설정하고, 변경되면 맞춰서 업데이트 하는 리스너 구현 */
+            window.addEventListener("load", function() {
+                // 페이지가 로드되면 기본 언어 설정
+                document.getElementById("languageSelector").value = "en";
+                updateLanguage("en");
+
+                // 언어 선택이 변경될 때마다 호출되는 이벤트 리스너
+                document.getElementById("languageSelector").addEventListener("change", function() {
+                    const selectedLang = this.value;
+                    updateLanguage(selectedLang);
+                });
+            });
+
+            function updateLanguage(lang) {
+                // #hide 요소를 선택
+                const hideElement = document.getElementById("hide");
+
+                for (let key in langResource[lang]) {
+                    const element = document.getElementById(key);
+                    if (element) {
+                        element.textContent = langResource[lang][key];
+                    }
+                }
+            }
+        </script>
+        
+    </body>
+</html>

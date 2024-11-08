@@ -1,0 +1,278 @@
+<html>
+    <head>
+        <title>NaCl profile</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="style.css" rel="stylesheet">
+        <link href="mobile.css" rel="stylesheet" media="(orientation: portrait)">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+        <script>
+            const langResource = {
+                en : {
+                    nacl: "NaCl",
+                    of: "'s",
+                    title: "About myself",
+
+                    h301: "Personal information",
+                    h301_h401: "Name",
+                    h301_p01: "Eneciel / En",
+                    h301_h402: "Age",
+                    h301_p02: "18",
+                    h301_h403: "Pronouns",
+                    h301_p03: "Any",
+                    h301_h404: "Flags",
+                    h301_p04_01: "Non-binary",
+                    h301_p04_02: "Pan",
+                    h301_h405: "Languages",
+                    h301_p05_01: "English",
+                    h301_p05_02: "Korean",
+
+                    h302: "Works",
+                    h302_h401: "Art",
+                    h302_p01: "Mostly doodles and gijinkas",
+                    h302_s01: "w/ Adobe Photoshop",
+                    h302_h402: "Translation",
+                    h302_p02: "English ↔ Korean",
+                    h302_s02: "w/ Subtitle Edit",
+                    h302_h403: "Animation",
+                    h302_p03: "Tween only",
+                    h302_s03: "w/ Adobe After Effects",
+
+                    h303: "Contact",
+                    h303_h401: "Main",
+                    h303_p01_01: "Twitter",
+                    h303_p01_02: "Discord",
+                    h303_h402: "Other SNS",
+                    h303_p02_01: "Bluesky",
+                    h303_p02_02: "Reddit",
+                    h303_p02_03: "Tumblr",
+                    h303_s02: "Not active, just for credit",
+                    h303_h403: "Else",
+                    h303_p03_01: "Youtube",
+                    h303_p03_02: "Postype",
+                },
+                ko : {
+                    nacl: "엔에씨엘",
+                    of: "의",
+                    title: "자기소개",
+
+                    h301: "기본 정보",
+                    h301_h401: "이름",
+                    h301_p01: "엔에씨엘",
+                    h301_h402: "나이",
+                    h301_p02: "만 18세",
+                    h301_h403: "대명사",
+                    h301_p03: "자유(Any)",
+                    h301_h404: "프라이드 플래그",
+                    h301_p04_01: "논바이너리",
+                    h301_p04_02: "범성애/범로맨틱",
+                    h301_h405: "언어",
+                    h301_p05_01: "영어",
+                    h301_p05_02: "한국어",
+
+                    h302: "활동 분야",
+                    h302_h401: "그림",
+                    h302_p01: "낙서, 의인화 위주",
+                    h302_s01: "어도비 포토샵 사용",
+                    h302_h402: "번역",
+                    h302_p02: "영어 ↔ 한국어",
+                    h302_s02: "Subtitle Edit 사용",
+                    h302_h403: "영상",
+                    h302_p03: "트위닝 온리, 프레임 애니메이션 X",
+                    h302_s03: "어도비 에프터 이펙트 사용",
+
+                    h303: "계정",
+                    h303_h401: "주 활동처",
+                    h303_p01_01: "트위터",
+                    h303_p01_02: "디스코드",
+                    h303_h402: "타 SNS",
+                    h303_p02_01: "블루스카이",
+                    h303_p02_02: "레딧",
+                    h303_p02_03: "텀블러",
+                    h303_s02: "활동 X, 참고용",
+                    h303_h403: "기타",
+                    h303_p03_01: "유튜브",
+                    h303_p03_02: "포스타입",
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <main>
+            <div id="nav">
+                <a href="index.html">← Back</a>
+                <div class="langContainer">
+                    <img src="source/icon/ic_globe.svg">
+                    <select id="languageSelector">
+                        <option value="en">English</option>
+                        <option value="ko">한국어</option>
+                    </select>
+                </div>
+            </div>
+            <div id="container">
+                <div class="center"> <!-- header -->
+                    <div class="row">
+                        <h3><span class="color-me" id="nacl"></span></h3>
+                        <h3 id="of"></h3>
+                    </div>
+                    <h2 id="title"></h2>
+                </div>
+                <div class="fill margin-8 padding-16"> <!-- personal info -->
+                    <div class="fill row-align"> <!-- header -->
+                        <h3 id="h301"></h3>
+                        <img src="source/img/about1.gif" style="width: 120px;">
+                    </div>
+                    <div class="row margin-16w"> <!-- name -->
+                        <h4 id="h301_h401"></h4>
+                        <p id="h301_p01"></p>
+                    </div>
+                    <div class="row margin-16w"> <!-- age -->
+                        <h4 id="h301_h402"></h4>
+                        <p id="h301_p02"></p>
+                    </div>
+                    <div class="row margin-16w"> <!-- pronouns -->
+                         <h4 id="h301_h403"></h4>
+                         <p id="h301_p03"></p>
+                     </div>
+                    <div class="row-align margin-16w mobile"> <!-- flags -->
+                        <h4 id="h301_h404"></h4>
+                        <div class="row margin-16w">
+                            <div class="iconhandle"><img src="source/icon/flag_nonbi.svg"><p id="h301_p04_01"></p></div>
+                            <div class="iconhandle"><img src="source/icon/flag_pan.svg"><p id="h301_p04_02"></p></div>
+                        </div>
+                    </div>
+                    <div class="row-align margin-16w mobile"> <!-- langs -->
+                        <h4 id="h301_h405"></h4>
+                        <div class="row margin-16w">
+                            <div class="iconhandle"><img src="source/icon/lang_usa.svg"><img src="source/icon/lang_australia.svg"><p id="h301_p05_01"></p></div>
+                            <div class="iconhandle"><img src="source/icon/lang_korea.svg"><p id="h301_p05_02"></p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fill margin-8 padding-16"> <!-- works -->
+                    <div class="fill row-align">
+                        <h3 id="h302"></h3>
+                        <img src="source/img/about2.gif" style="width: 120px;">
+                    </div>
+                    <div class="row margin-16w mobile"> <!-- art -->
+                        <h4 id="h302_h401"></h4>
+                        <p id="h302_p01"></p>
+                        <small id="h302_s01"></small>
+                    </div>
+                    <div class="row margin-16w mobile"> <!-- translation -->
+                        <h4 id="h302_h402"></h4>
+                        <p id="h302_p02"></p>
+                        <small id="h302_s02"></small>
+                    </div>
+                    <div class="row margin-16w mobile"> <!-- animation -->
+                        <h4 id="h302_h403"></h4>
+                        <p id="h302_p03"></p>
+                        <small id="h302_s03"></small>
+                    </div>
+                    <!--
+                    <div class="row margin-16w">
+                        <h4>Design</h4>
+                        <p>Major, Layouts & UI/UX</p>
+                        <small>w/ Figma</small>
+                    </div>
+                    <div class="row margin-16w">
+                        <h4>Web design</h4>
+                        <p>HTML&CSS&JS</p>
+                        <small>w/ VS Code</small>
+                    </div>
+                    -->
+                </div>
+                <div class="fill margin-8 padding-16"> <!-- contact -->
+                    <div class="fill row-align">
+                        <h3 id="h303"></h3>
+                        <img src="source/img/about3.gif" style="width: 120px;">
+                    </div>
+                    <div class="row-align margin-16w mobile"> <!-- DM -->
+                        <h4 id="h303_h401"></h4>
+                        <div class="row margin-16w">
+                            <a href="https://x.com/o__eneciel" target="_blank"><div class="iconhandle">
+                                <img src="source/icon/ic_twitter.svg">
+                                <p id="h303_p01_01"></p>
+                            </div></a>
+                            <a onclick="copyDiscord()" href=""><div class="iconhandle">
+                                <img src="source/icon/ic_discord.svg">
+                                <p id="h303_p01_02"></p>
+                            </div></a>
+                        </div>
+                    </div>
+                    <div> <!-- SNS -->
+                        <div class="row-align margin-16w mobile">
+                            <h4 id="h303_h402"></h4>
+                            <div class="row margin-16w">
+                                <a href="https://bsky.app/profile/eneciel.bsky.social" target="_blank"><div class="iconhandle">
+                                    <img src="source/icon/ic_bluesky.svg">
+                                    <p id="h303_p02_01"></p>
+                                </div></a>
+                                <a href="https://www.reddit.com/u/eneciel" target="_blank"><div class="iconhandle">
+                                    <img src="source/icon/ic_reddit.svg">
+                                    <p id="h303_p02_02"></p>
+                                </div></a>
+                                <a href="https://www.tumblr.com/eneciel" target="_blank"><div class="iconhandle">
+                                    <img src="source/icon/ic_tumblr.svg">
+                                    <p id="h303_p02_03"></p>
+                                </div></a>
+                            </div>
+                        </div>
+                        <small id="h303_s02"></small>
+                    </div>
+                    <div class="row-align margin-16w mobile"> <!-- other -->
+                        <h4 id="h303_h403"></h4>
+                        <div class="row margin-16w">
+                            <a href="https://www.youtube.com/@NaClishere" target="_blank"><div class="iconhandle">
+                                <img src="source/icon/ic_youtube.svg">
+                                <p id="h303_p03_01"></p>
+                            </div></a>
+                            <a href="https://postype.com/@eneciel" target="_blank"><div class="iconhandle">
+                                <img src="source/icon/ic_postype.svg">
+                                <p id="h303_p03_02"></p>
+                            </div></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <p>NaCl's profile</p>
+            </footer>
+        </main>
+
+        <script>
+            function copyDiscord() {
+                navigator.clipboard.writeText('eneciel')
+                alert('Copied "eneciel"!')
+            }
+
+            /* 초기 언어는 영어(en)로 설정하고, 변경되면 맞춰서 업데이트 하는 리스너 구현 */
+            window.addEventListener("load", function() {
+                // 페이지가 로드되면 기본 언어 설정
+                document.getElementById("languageSelector").value = "en";
+                updateLanguage("en");
+
+                // 언어 선택이 변경될 때마다 호출되는 이벤트 리스너
+                document.getElementById("languageSelector").addEventListener("change", function() {
+                    const selectedLang = this.value;
+                    updateLanguage(selectedLang);
+                });
+            });
+
+            function updateLanguage(lang) {
+                // #hide 요소를 선택
+                const hideElement = document.getElementById("hide");
+
+                for (let key in langResource[lang]) {
+                    const element = document.getElementById(key);
+                    if (element) {
+                        element.textContent = langResource[lang][key];
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

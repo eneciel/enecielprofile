@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <title>NaCl profile</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="style.css" rel="stylesheet">
+        <link href="mobile.css" rel="stylesheet" media="(orientation: portrait)">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+        <script>
+            function play() {
+                var audio = document.getElementById("audioclick");
+                var image = document.getElementById("hiTwo");
+                
+                if (audio.paused) {
+                    audio.play();
+                    image.animate(
+                        {scale: [1, 1.5] , easing: ["ease-out"]},
+                        800
+                    )
+                }else{
+                    audio.play();
+                    audio.currentTime = 0
+                };
+            };
+
+            const langResource = {
+                en : {
+                    nacl: "NaCl",
+                    clickme: "↑ Click me",
+                    profileof: "'s profile",
+                    btn01: "About myself",
+                    btn02: "Favourites",
+                    btn03: "Before You Follow"
+                },
+
+                ko : {
+                    nacl: "엔에씨엘",
+                    clickme: "↑ 눌러보세요",
+                    profileof: "의 프로필",
+                    btn01: "자기소개",
+                    btn02: "최애 정리",
+                    btn03: "유의사항"
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <audio src="source/audio/Two Hi everyone.mp3" id="audiowelcome"></audio>
+        <audio src="source/audio/Two Hi everyone.mp3" id="audioclick"></audio>
+        <main style="height: 100%; padding: 0;">
+            <div id="nav">
+                <div class="padding-8w"><img src="source/icon/ic_home.svg"></div>
+                <div class="langContainer">
+                    <img src="source/icon/ic_globe.svg">
+                    <select id="languageSelector">
+                        <option value="en">English</option>
+                        <option value="ko">한국어</option>
+                    </select>
+                </div>
+            </div>
+            <div id="home">
+                <button class="empty" onclick="play()">
+                    <div class="center">
+                        <img src="source/img/two no bg.png" id="hiTwo">
+                        <small id="clickme"></small>
+                    </div>
+                </button>
+                
+                <div class="center" style="padding-bottom: 48px;">
+                    <div class="row">
+                        <h1><span class="color-me" id="nacl"></span></h1>
+                        <h1 id="profileof"></h1>
+                    </div>
+                </div>
+
+                <div class="center margin-16">
+                    <div class="buttons margin-16w">
+                        <button onclick="location.href='info.html'" id="btn01"></button>
+                        <button onclick="location.href='favs.html'" id="btn02"></button>
+                        <button onclick="location.href='byf.html'" id="btn03"></button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <script>
+            /* 초기 언어는 영어(en)로 설정하고, 변경되면 맞춰서 업데이트 하는 리스너 구현 */
+            window.addEventListener("load", function() {
+                // 페이지가 로드되면 기본 언어 설정
+                document.getElementById("languageSelector").value = "en";
+                updateLanguage("en");
+
+                // 언어 선택이 변경될 때마다 호출되는 이벤트 리스너
+                document.getElementById("languageSelector").addEventListener("change", function() {
+                    const selectedLang = this.value;
+                    updateLanguage(selectedLang);
+                });
+            });
+
+            function updateLanguage(lang) {
+                // #hide 요소를 선택
+                const hideElement = document.getElementById("hide");
+
+                for (let key in langResource[lang]) {
+                    const element = document.getElementById(key);
+                    if (element) {
+                        element.textContent = langResource[lang][key];
+                    }
+                }
+                
+                /* const html = document.getElementsByTagName("html");
+                html.classList.toggle("fonts"); */
+            }
+        </script>
+        
+    </body>
+</html>

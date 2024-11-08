@@ -1,0 +1,185 @@
+<html>
+    <head>
+        <title>NaCl profile</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="style.css" rel="stylesheet">
+        <link href="mobile.css" rel="stylesheet" media="(orientation: portrait)">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+        <script>
+            function play() {
+                var audio = document.getElementById("audioclick");
+                var image = document.getElementById("hiTwo");
+                
+                if (audio.paused) {
+                    audio.play();
+                    image.animate(
+                        {scale: [1, 1.5] , easing: ["ease-out"]},
+                        800
+                    )
+                }else{
+                    audio.play();
+                    audio.currentTime = 0
+                };
+            };
+
+            const langResource = {
+                en : {
+                    nacl: "Nacl",
+                    of: "'s",
+                    title: "Before You Follow",
+
+                    h301: "About my works",
+                    h301_h401: "❌ AI Training",
+                    h301_p01: "Never.",
+                    h301_h402: "⭕ Save",
+                    h301_p02: "Allowed under just personally holding in",
+                    h301_h403: "⭕ Profile/Banner",
+                    h301_p03: "Allowed under giving credit, including 'Twitter' indicated if outside",
+                    h301_h404: "❌ Repost",
+                    h301_p04: "I DO NOT appreciate any kinds of repost.",
+                    h301_s04: "If you saw someone using my art without credit or reposting, please contact me through DM and do not interact with them.",
+                    h301_h405: "⭕ Reference",
+                    h301_p05: "Allowed under giving direct credit by qrt",
+
+                    h302: "Interacting with me",
+                    h302_h401: "Have common sense",
+                    h302_p01: "Be nice and respect.",
+                    h302_h402: "Use tone indicator for negative words",
+                    h302_p02: "It's okay to go with jokes while being casual, but please consider using tone indicator if it can be misread to someone as an assult.",
+                    h302_h403: "Contact privatly first",
+                    h302_p03: "Whenever there's a problem over my tweet, do not publically talk on it and come to my DM first."
+                },
+                ko : {
+                    nacl: "엔에씨엘",
+                    of: "의",
+                    title: "유의사항",
+
+                    h301: "그림 사용 범위",
+                    h301_h401: "❌ AI 트레이닝",
+                    h301_p01: "절대 금지",
+                    h301_h402: "⭕ 저장",
+                    h301_p02: "개인 소장 가능",
+                    h301_h403: "⭕ 프로필/배너 설정",
+                    h301_p03: "출처 표기 후 사용 가능, 트위터 외에서 사용 시 '트위터' 명시",
+                    h301_h404: "❌ 재업",
+                    h301_p04: "모든 종류의 재업을 금합니다.",
+                    h301_s04: "출처 표기 없이 제 그림을 사용하고 있거나 재업로드한 것을 발견하셨을 경우, 직접 대화는 피하시고 제게 DM 주세요.",
+                    h301_h405: "⭕ 참고",
+                    h301_p05: "트윗 링크를 남긴 경우 가능",
+
+                    h302: "대화 시",
+                    h302_h401: "상식적인 기본 예절을 지켜주세요",
+                    h302_p01: "초면 디엠이나 멘션, 인용 등 모두 괜찮으나 트윗 뒤에 사람이 있다는 점을 잊지 말아주시기 바랍니다.",
+                    h302_h402: "오해가 있을 만한 내용은 피해주세요",
+                    h302_p02: "초면인 사이에 부정적인 의미로 사용되는 감탄사만 적는 등, 읽는 사람에 따라 다르게 해석될 수 있는 내용을 적으실 때 유의해 주시기 바랍니다.",
+                    h302_h403: "디엠으로 먼저 연락주세요",
+                    h302_p03: "문제가 있을 경우 공개적으로 내용을 쓰기 전에 먼저 디엠으로 문의 주시기 바랍니다."
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <main style="height: auto; padding: 80px 0;">
+            <div id="nav">
+                <a href="index.html">← Back</a>
+                <div class="langContainer">
+                    <img src="source/icon/ic_globe.svg">
+                    <select id="languageSelector">
+                        <option value="en">English</option>
+                        <option value="ko">한국어</option>
+                    </select>
+                </div>
+            </div>
+            <div id="container">
+                <div class="center">
+                    <div class="row">
+                        <h3><span class="color-me" id="nacl"></span></h3>
+                        <h3 id="of"></h3>
+                    </div>
+                    <h2 id="title"></h2>
+                </div>
+                <div class="fill margin-8 padding-16"> <!-- works -->
+                    <div class="fill row-align">
+                        <h3 id="h301"></h3>
+                        <img src="source/img/byf1.gif" style="width: 120px;">
+                    </div>
+                    <div class="margin-8 padding-8">
+                        <div> <!-- AI training -->
+                            <h4 id="h301_h401"></h4> 
+                            <p id="h301_p01"></p>
+                        </div>
+                        <div> <!-- save -->
+                            <h4 id="h301_h402"></h4>
+                            <p id="h301_p02"></p>
+                        </div>
+                        <div> <!-- profile -->
+                            <h4 id="h301_h403"></h4>
+                            <p id="h301_p03"></p>
+                        </div>
+                        <div> <!-- repost -->
+                            <h4 id="h301_h404"></h4>
+                            <p id="h301_p04"></p>
+                            <small id="h301_s04"></small>
+                        </div>
+                        <div> <!-- reference -->
+                            <h4 id="h301_h405"></h4>
+                            <p id="h301_p05"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="fill margin-8 padding-16">
+                    <div class="fill row-align">
+                        <h3 id="h302"></h3>
+                        <img src="source/img/byf2.gif" style="width: 120px;">
+                    </div>
+                    <div class="margin-8 padding-8">
+                        <div> <!-- common sense -->
+                            <h4 id="h302_h401"></h4>
+                            <p id="h302_p01"></p>
+                        </div>
+                        <div> <!-- tone indicator -->
+                            <h4 id="h302_h402"></h4>
+                            <p id="h302_p02"></p>
+                        </div>
+                        <div> <!-- dm first -->
+                            <h4 id="h302_h403"></h4>
+                            <p id="h302_p03"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <script>
+            /* 초기 언어는 영어(en)로 설정하고, 변경되면 맞춰서 업데이트 하는 리스너 구현 */
+            window.addEventListener("load", function() {
+                // 페이지가 로드되면 기본 언어 설정
+                document.getElementById("languageSelector").value = "en";
+                updateLanguage("en");
+
+                // 언어 선택이 변경될 때마다 호출되는 이벤트 리스너
+                document.getElementById("languageSelector").addEventListener("change", function() {
+                    const selectedLang = this.value;
+                    updateLanguage(selectedLang);
+                });
+            });
+
+            function updateLanguage(lang) {
+                // #hide 요소를 선택
+                const hideElement = document.getElementById("hide");
+
+                for (let key in langResource[lang]) {
+                    const element = document.getElementById(key);
+                    if (element) {
+                        element.textContent = langResource[lang][key];
+                    }
+                }
+            }
+        </script>
+        
+    </body>
+</html>
