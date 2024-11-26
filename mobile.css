@@ -51,11 +51,20 @@ footer {
 
 #overflow {
     flex-wrap: wrap;
-    * + * {
+    div + div {
         margin-top: 16px;
     }
 }
 
 .bodytext {
     text-align: start;
+}
+
+.characterbox {
+    img {
+        padding-bottom: 4px;
+    }
+    h4, p {
+        padding-top: 4px;
+    }
 }
