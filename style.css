@@ -198,6 +198,10 @@ footer > p {
     align-items: center;
 }
 
+details {
+    width: 100%;
+}
+
 .row {
     display: flex;
     align-items: baseline;
