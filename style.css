@@ -68,6 +68,22 @@ h4 {
     margin: 0;
 }
 
+h5 {
+    font-family: "GM";
+    font-size: 16px;
+    line-height: 24px;
+    padding: 0;
+    margin: 0;
+}
+
+h6 {
+    font-family: "GM";
+    font-size: 16px;
+    line-height: 24px;
+    padding: 0;
+    margin: 0;
+}
+
 p {
     font-family: "GM";
     color: var(--G02);
@@ -198,6 +214,14 @@ footer > p {
     align-items: center;
 }
 
+.section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 0;
+}
+
 details {
     width: 100%;
 }
@@ -214,6 +238,10 @@ details {
 
 .row-align > * {
     margin: 0;
+}
+
+.row-start {
+    display: flex;
 }
 
 .fill {
