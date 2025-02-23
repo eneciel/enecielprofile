@@ -355,3 +355,8 @@ details {
 .bodytext {
     text-align: center;
 }
+
+.artcontainer img, .artcontainer > div {
+    width: 100%;
+    margin-bottom: 8px;
+}
