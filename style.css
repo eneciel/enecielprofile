@@ -360,3 +360,13 @@ details {
     width: 100%;
     margin-bottom: 8px;
 }
+
+.circle, .circle > * {
+    border-radius: 9999px;
+}
+
+#pfp > img {
+    width: 120px;
+    height: 120px;
+    display: flex;
+}
