@@ -19,6 +19,7 @@ html, body {
     background-color: var(--G07);
 
     word-break: keep-all;
+    text-wrap: wrap;
 }
 
 @font-face {
@@ -34,6 +35,13 @@ html, body {
 @font-face {
     font-family: "GMLight";
     src: url(source/GmarketSansTTFLight.ttf);
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
 }
 
 h1 {
@@ -111,6 +119,11 @@ a {
     margin: 0;
 }
 
+ul {
+    margin: 0;
+    padding-left: 36px;
+}
+
 span.color-me {
     background-color: var(--me);
 }
@@ -178,7 +191,7 @@ main {
 }
 
 #nav {
-    width: 50%;
+    width: 720px;
     height: 56px;
     display: flex;
     justify-content: space-between;
@@ -186,7 +199,7 @@ main {
 }
 
 footer {
-    width: 50%;
+    width: 720px;
     height: 120px;
     padding-top: 80px;
     display: flex;
@@ -208,8 +221,7 @@ footer > p {
 }
 
 #container {
-    width: 50%;
-    display: flex;
+    width: 720px;
     flex-direction: column;
     align-items: center;
 }
@@ -369,4 +381,12 @@ details {
     width: 120px;
     height: 120px;
     display: flex;
+}
+
+#pfpbanner > div {
+    position: relative;
+}
+
+#pfpbox {
+    top: -60px;
 }

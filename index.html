@@ -1,0 +1,199 @@
+<html>
+    <head>
+        <title>About NaCl</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../style.css" rel="stylesheet">
+        <link href="../mobile.css" rel="stylesheet" media="(orientation: portrait)">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+        <style>
+            h2 {
+                font-family: "Pretendard";
+                font-weight: 900;
+            }
+            h4 {
+                font-family: "Pretendard";
+                font-weight: 700;
+            }
+            p {
+                font-family: "Pretendard";
+                font-weight: 400;
+            }
+            small {
+                font-family: "Pretendard";
+                font-weight: 200;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <script>
+            const langResource = {
+                en : {
+                    nameMain: "NaCl",
+                    nameAlt: "Eneciel / En",
+                    hInstruction: "About me",
+                    quote: "‘ Your average wrong timezone oomf ’",
+                    basicinfo: "18 | any; They/Them | KOR/ENG👍 ESP/JP👌",
+                    hMainwork: "Main activities",
+                    mainwork1: "KR <-> EN Translating (Subtitle Edit)",
+                    mainwork2: "Video editing (Premiere Pro, After Effects)",
+                    mainwork3: "Web design (Figma, Photoshop, Illustrator, HTML&CSS)",
+                    hTeams: "Teams",
+                    team1: "TMOA_PEOPLE | Member, Video editor, Translator",
+                    team2: "QSMP Wiki team | Content Mod(Intern), Korean Wiki management, Translator, Quackity specialist",
+                    hLinks: "Links",
+                    linkYtMain: "NaCl",
+                    linkYtTr: "Eneciel",
+                    linkYtTmoa: "TMOA_PEOPLE",
+                    linkTwtZ: "@z__eneciel",
+                    hContact: "Contact",
+                    contactDiscord: "eneciel",
+                    contactEmail: "Email"
+                },
+
+                ko : {
+                    nameMain: "엔에씨엘",
+                    nameAlt: "엔에씨엘 / 엔 / 씨엘",
+                    hInstruction: "소개",
+                    quote: "‘ 그렇게 간단하지가 않음 ’",
+                    basicinfo: "06 | 논바이너리 (any; They/Them) | 한/영👍 스페인어/일본어👌",
+                    hMainwork: "주 활동 분야",
+                    mainwork1: "KR <-> EN 번역 (Subtitle Edit)",
+                    mainwork2: "영상 편집 (Premiere Pro, After Effects)",
+                    mainwork3: "웹디자인 (Figma, Photoshop, Illustrator, HTML&CSS)",
+                    hTeams: "소속",
+                    team1: "트친모아아파트 | 멤버, 편집자, 번역 담당",
+                    team2: "QSMP Wiki 팀 | Content Mod(인턴), 한국어 위키 관리, 번역가, Quackity specialist",
+                    hLinks: "관련 링크",
+                    linkYtMain: "NaCl",
+                    linkYtTr: "소금빵",
+                    linkYtTmoa: "트친모아아파트",
+                    linkTwtZ: "@z__eneciel",
+                    hContact: "연락처",
+                    contactDiscord: "eneciel",
+                    contactEmail: "이메일"
+                }
+            }
+        </script>
+
+        <main>
+            <div id="nav">
+                <div class="padding-8w"><img src="../source/icon/ic_home.svg"></div>
+                <div class="langContainer">
+                    <img src="../source/icon/ic_globe.svg">
+                    <select id="languageSelector">
+                        <option value="en">English</option>
+                        <option value="ko">한국어</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="container" class="margin-16">
+                <div class="center margin-16 padding-8w">
+                    <div class="circle" id="pfp">
+                        <img src="source/img/pfp.png">
+                    </div>
+                    <div class="center">
+                        <h2 id="nameMain"></h2>
+                        <p id="nameAlt"></p>
+                    </div>
+                </div>
+
+                <div class="fill margin-8 padding-8w">
+                    <div class="fill">
+                        <h4 id="hInstruction"></h4>
+                    </div>
+                    <div>
+                        <p id="quote" style="font-style: italic;"></p>
+                        <p id="basicinfo"></p>
+                    </div>
+                </div>
+
+                <div class="fill margin-8 padding-8w">
+                    <div class="fill">
+                        <h4 id="hMainwork"></h4>
+                    </div>
+                    <div>
+                        <ul>
+                            <li><p id="mainwork1"></p></li>
+                            <li><p id="mainwork2"></p></li>
+                            <li><p id="mainwork3"></p></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="fill margin-8 padding-8w">
+                    <div class="fill">
+                        <h4 id="hTeams"></h4>
+                    </div>
+                    <div>
+                        <ul>
+                            <li><p id="team1"></p></li>
+                            <li><p id="team2"></p></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="fill margin-8 padding-8w">
+                    <div class="fill">
+                        <h4 id="hLinks"></h4>
+                    </div>
+                    <div>
+                        <ul>
+                            <li><a href="https://www.youtube.com/@NaClishere" target="_blank"><div class="iconhandle"><img src="../source/icon/ic_youtube.svg"><p id="linkYtMain"></p></div></a></li>
+                            <li><a href="https://www.youtube.com/@thrmabread" target="_blank"><div class="iconhandle"><img src="../source/icon/ic_youtube.svg"><p id="linkYtTr"></p></div></a></li>
+                            <li><a href="https://www.youtube.com/@TMOA_PEOPLE" target="_blank"><div class="iconhandle"><img src="../source/icon/ic_youtube.svg"><p id="linkYtTmoa"></p></div></a></li>
+                            <li><a href="https://x.com/z__eneciel" target="_blank"><div class="iconhandle"><img src="../source/icon/ic_twitter.svg"><p id="linkTwtZ"></p></div></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="fill margin-8 padding-8w">
+                    <div class="fill">
+                        <h4 id="hContact"></h4>
+                    </div>
+                    <div>
+                        <ul>
+                            <li><div class="iconhandle"><img src="source/icon/ic_discord.svg"><p id="contactDiscord"></p></div></li>
+                            <li><a href="mailto:darudaru0823@gmail.com"><p id="contactEmail"></p></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <script>
+            /* 초기 언어는 영어(en)로 설정하고, 변경되면 맞춰서 업데이트 하는 리스너 구현 */
+            window.addEventListener("load", function() {
+                // 페이지가 로드되면 기본 언어 설정
+                document.getElementById("languageSelector").value = "en";
+                updateLanguage("en");
+
+                // 언어 선택이 변경될 때마다 호출되는 이벤트 리스너
+                document.getElementById("languageSelector").addEventListener("change", function() {
+                    const selectedLang = this.value;
+                    updateLanguage(selectedLang);
+                });
+            });
+
+            function updateLanguage(lang) {
+                // #hide 요소를 선택
+                const hideElement = document.getElementById("hide");
+
+                for (let key in langResource[lang]) {
+                    const element = document.getElementById(key);
+                    if (element) {
+                        element.textContent = langResource[lang][key];
+                    }
+                }
+                
+                /* const html = document.getElementsByTagName("html");
+                html.classList.toggle("fonts"); */
+            }
+        </script>
+    </body>
+</html>
