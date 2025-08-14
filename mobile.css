@@ -68,3 +68,21 @@ footer {
         padding-top: 4px;
     }
 }
+
+#pfpbanner > div, #pfpbanner > div > img {
+    width: 100%;
+}
+
+#pfpbox .circle {
+    width: 80px;
+    height: 80px;
+}
+
+#pfpbox .circle img {
+    width: 100%;
+    height: 100%;
+}
+
+#pfpbox {
+    top: -40px;
+} 
