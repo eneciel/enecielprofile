@@ -20,6 +20,8 @@ html, body {
 
     word-break: keep-all;
     text-wrap: wrap;
+
+    scroll-behavior: smooth;
 }
 
 @font-face {
@@ -145,16 +147,19 @@ button {
     font-family: "GMBold";
     font-size: 18px;
     line-height: 28px;
-    color: var(--G08);
-    background-color: var(--G01);
-    border: none;
+    color: var(--G01);
+    background: none;
+    border: var(--me) 1px solid;
     border-radius: 9999px;
     padding: 4px 24px;
     margin: 0;
+    transition: background-color 300ms ease;
 }
 
 button:hover {
     cursor: pointer;
+    background-color: var(--me);
+    transition: background-color 300ms ease;
 }
 
 button.empty {
@@ -321,6 +326,10 @@ details {
     padding: 16px 0;
 }
 
+.padding-8 {
+    padding: 8px 0;
+}
+
 .padding-8w {
     padding: 0 8px;
 }
@@ -390,4 +399,15 @@ details {
 
 #pfpbox {
     top: -60px;
+}
+
+.navbtn {
+    text-decoration: none;
+    border-bottom: var(--G07) 1px solid;
+    padding: 4px 36px;
+    transition: 200ms ease;
+}
+
+.navbtn:hover {
+    border-bottom: var(--me) 1px solid;
 }
