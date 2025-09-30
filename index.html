@@ -37,19 +37,23 @@
                     nameAlt: "Eneciel / En",
                     hInstruction: "About me",
                     quote: "‘ Your average wrong timezone oomf ’",
-                    basicinfo: "18 | any; They/Them | KOR/ENG👍 ESP/JP👌",
-                    hMainwork: "Main activities",
+                    basicinfo: "19 | any; They/Them | KOR/ENG👍 ESP/JP👌",
+                    hMainwork: "Mainly working on:",
                     mainwork1: "KR <-> EN Translating (Subtitle Edit)",
                     mainwork2: "Video editing (Premiere Pro, After Effects)",
                     mainwork3: "Web design (Figma, Photoshop, Illustrator, HTML&CSS)",
                     hTeams: "Teams",
                     team1: "TMOA_PEOPLE | Member, Video editor, Translator",
-                    team2: "QSMP Wiki team | Content Mod(Intern), Korean Wiki management, Translator, Quackity specialist",
+                    team2: "QSMP Wiki team | Content Mod, Korean Wiki management, Translator, Quackity specialist",
+                    team3: "Chips | English -> Korean translation",
                     hLinks: "Links",
+                    linkPersonal: "Personal",
                     linkYtMain: "NaCl",
                     linkYtTr: "Eneciel",
-                    linkYtTmoa: "TMOA_PEOPLE",
                     linkTwtZ: "@z__eneciel",
+                    linkTeams: "Teams",
+                    linkYtTmoa: "TMOA_PEOPLE",
+                    linkYtChips: "Chips",
                     hContact: "Contact",
                     contactDiscord: "eneciel",
                     contactEmail: "Email"
@@ -67,12 +71,16 @@
                     mainwork3: "웹디자인 (Figma, Photoshop, Illustrator, HTML&CSS)",
                     hTeams: "소속",
                     team1: "트친모아아파트 | 멤버, 편집자, 번역 담당",
-                    team2: "QSMP Wiki 팀 | Content Mod(인턴), 한국어 위키 관리, 번역가, Quackity specialist",
+                    team2: "QSMP Wiki 팀 | Content Mod, 한국어 위키 관리, 번역가, Quackity specialist",
+                    team3: "Chips | 영어 번역",
                     hLinks: "관련 링크",
+                    linkPersonal: "개인",
                     linkYtMain: "NaCl",
                     linkYtTr: "소금빵",
-                    linkYtTmoa: "트친모아아파트",
                     linkTwtZ: "@z__eneciel",
+                    linkTeams: "팀",
+                    linkYtTmoa: "트친모아아파트",
+                    linkYtChips: "Chips",
                     hContact: "연락처",
                     contactDiscord: "eneciel",
                     contactEmail: "이메일"
@@ -82,9 +90,9 @@
 
         <main>
             <div id="nav">
-                <div class="padding-8w"><img src="../source/icon/ic_home.svg"></div>
+                <div class="padding-8w"><img src="source/icon/ic_home.svg"></div>
                 <div class="langContainer">
-                    <img src="../source/icon/ic_globe.svg">
+                    <img src="source/icon/ic_globe.svg">
                     <select id="languageSelector">
                         <option value="en">English</option>
                         <option value="ko">한국어</option>
@@ -134,6 +142,7 @@
                         <ul>
                             <li><p id="team1"></p></li>
                             <li><p id="team2"></p></li>
+                            <li><p id="team3"></p></li>
                         </ul>
                     </div>
                 </div>
@@ -142,13 +151,22 @@
                     <div class="fill">
                         <h4 id="hLinks"></h4>
                     </div>
-                    <div>
-                        <ul>
-                            <li><a href="https://www.youtube.com/@NaClishere" target="_blank"><div class="iconhandle"><img src="source/icon/ic_youtube.svg"><p id="linkYtMain"></p></div></a></li>
-                            <li><a href="https://www.youtube.com/@thrmabread" target="_blank"><div class="iconhandle"><img src="source/icon/ic_youtube.svg"><p id="linkYtTr"></p></div></a></li>
-                            <li><a href="https://www.youtube.com/@TMOA_PEOPLE" target="_blank"><div class="iconhandle"><img src="source/icon/ic_youtube.svg"><p id="linkYtTmoa"></p></div></a></li>
-                            <li><a href="https://x.com/z__eneciel" target="_blank"><div class="iconhandle"><img src="source/icon/ic_twitter.svg"><p id="linkTwtZ"></p></div></a></li>
-                        </ul>
+                    <div class="row mobile">
+                        <div class="fill">
+                            <p style="text-indent: 8px; padding-top: 8px;" id="linkPersonal"></p>
+                            <ul>
+                                <li><a href="https://www.youtube.com/@NaClishere" target="_blank"><div class="iconhandle"><img src="source/icon/ic_youtube.svg"><p id="linkYtMain"></p></div></a></li>
+                                <li><a href="https://www.youtube.com/@thrmabread" target="_blank"><div class="iconhandle"><img src="source/icon/ic_youtube.svg"><p id="linkYtTr"></p></div></a></li>
+                                <li><a href="https://x.com/z__eneciel" target="_blank"><div class="iconhandle"><img src="source/icon/ic_twitter.svg"><p id="linkTwtZ"></p></div></a></li>
+                            </ul>
+                        </div>
+                        <div class="fill">
+                            <p style="text-indent: 8px; padding-top: 8px;" id="linkTeams"></p>
+                            <ul>
+                                <li><a href="https://www.youtube.com/@TMOA_PEOPLE" target="_blank"><div class="iconhandle"><img src="source/icon/ic_youtube.svg"><p id="linkYtTmoa"></p></div></a></li>
+                                <li><a href="https://www.youtube.com/@칩스" target="_blank"><div class="iconhandle"><img src="source/icon/ic_youtube.svg"><p id="linkYtChips"></p></div></a></li> 
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
